@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Thoughtful Comment Ghostwriter</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <!-- Animated background glow orbs -->
+    <div class="bg-glow"></div>
+
+    <main class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <span class="header-icon">✨</span>
+                <div class="header-text">
+                    <h1>Ghostwriter</h1>
+                    <p>AI-powered thoughtful comments</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="settingsBtn" class="btn-header" title="Settings">⚙</button>
+                <button id="exportBtn" class="btn-header" title="Export">📥</button>
+            </div>
+        </div>
+
+        <!-- Mode Select -->
+        <label for="modeSelect">Mode</label>
+        <select id="modeSelect">
+            <option>Builder</option>
+            <option>Strategist</option>
+            <option>Operator</option>
+            <option>Contrarian</option>
+            <option>Teacher</option>
+            <option>Curious Connector</option>
+        </select>
+
+        <!-- Extra Context -->
+        <label for="extraContext">Extra Context</label>
+        <textarea id="extraContext" rows="3" placeholder="Add optional context for the AI…"></textarea>
+
+        <!-- Action Buttons -->
+        <div class="row">
+            <button id="generateBtn" class="btn-primary">⚡ Generate</button>
+            <button id="regenerateBtn" class="btn-secondary">↻ Regenerate</button>
+        </div>
+
+        <!-- Loading Animation -->
+        <div class="loading-container" id="loadingContainer">
+            <span class="loading-dot"></span>
+            <span class="loading-dot"></span>
+            <span class="loading-dot"></span>
+            <span class="loading-text">Crafting your comment…</span>
+        </div>
+
+        <!-- Result -->
+        <label for="result">Generated Comment</label>
+        <textarea id="result" rows="7" placeholder="Your AI-crafted comment will appear here…" readonly></textarea>
+
+        <!-- Utility Buttons -->
+        <div class="row">
+            <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Status -->
+        <p id="status" class="status status-info">Ready</p>
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
